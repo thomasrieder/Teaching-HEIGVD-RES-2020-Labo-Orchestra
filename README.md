@@ -104,7 +104,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | --- | --- |
 |Question | How can we represent the system in an **architecture diagram**, which gives information both about the Docker containers, the communication protocols and the commands? |
-| | *Insert your diagram here...* |
+| | ![](./RES-diagram.png) |
 |Question | Who is going to **send UDP datagrams** and **when**? |
 | | All musicians send each second an **UDP datagram**. The auditor will send an **UDP datagram** at the first musician request. |
 |Question | Who is going to **listen for UDP datagrams** and what should happen when a datagram is received? |
@@ -142,11 +142,11 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | How do we **define and build our own Docker image**?|
-| | *Enter your response here...*  |
+| | We can define it using the **Dockerfile** file and build it with `docker build [-t tag] [directory]` |
 |Question | How can we use the `ENTRYPOINT` statement in our Dockerfile?  |
 | | The **ENTRYPOINT** will be prepend our **CMD** line. The **CMD** will be replaced by args given in the `docker run` command |
 |Question | After building our Docker image, how do we use it to **run containers**?  |
-| | *Enter your response here...*  |
+| | `docker run [--name name] [image-name] [ARGS]`               |
 |Question | How do we get the list of all **running containers**?  |
 | | `docker ps` |
 |Question | How do we **stop/kill** one running container?  |
@@ -176,7 +176,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | How do we validate that the whole system works, once we have built our Docker image? |
-| | By running a **Auditor** and several **Musician** and kill **Musician** gradually to see what the server sending back to us. |
+| | By running a **Auditor** and several **Musician** and kill or add **Musician** gradually to see what the server sending back to us. |
 
 
 ## Constraints
