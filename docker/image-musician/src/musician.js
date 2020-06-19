@@ -6,9 +6,8 @@ const { v4: uuidv4 } = require('uuid');
 
 var s = dgram.createSocket('udp4');
 
-// s.bind(0, '', function() {
-// 	s.setBroadcast(true);	
-// });
+
+console.log("INSTRUMENT: "+process.argv[2]);
 
 
 var protocol = {
@@ -20,14 +19,8 @@ var protocol = {
 
 var musician = {
     uuid: uuidv4(),
-    instrument: "piano"
+    instrument: "piano" //get it from docker
 }
-
-// s.bind(protocol.PROTOCOL_PORT, function() {
-
-//     console.log("Joining multicast group: "+protocol.PROTOCOL_MULTICAST_ADDRESS);
-//     //s.addMembership(protocol.PROTOCOL_MULTICAST_ADDRESS);
-// });
 
 
 message = new Buffer.from(JSON.stringify(musician));	
